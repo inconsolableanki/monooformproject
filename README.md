@@ -6,8 +6,11 @@ There are two file inside the project.
 Program 2
 
 node LeastTotal.js 
+
 Please Enter Array Length  6
+
 Plese Enter Dividing Value  3
+
 Plese Enter array Value Seprate with comma 4,8,15,16,23,42
 
 Note : Array value need to enter like above like 2,3,4,5,6 and then press enter. 

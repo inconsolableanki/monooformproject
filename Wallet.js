@@ -1,5 +1,4 @@
 const readline = require("readline");
-const { concatSeries } = require("async");
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -8,40 +7,34 @@ const rl = readline.createInterface({
 
 let total, depositedAmount, bonusAmount , winningAmount;
 
-rl.question("Add some money!!!", function (Deposits) {
+rl.question("Depsite Amount in wallet!!!  ", function (Deposits) {
 
-    rl.question("Add some bonus!!!", function (BonusValue) {
+    rl.question("Add some bonus!!!  ", function (BonusValue) {
 
-        rl.question("Add some winamount!!!", function (winValue) {
+        rl.question("Add some winamount!!!  ", function (winValue) {
 
 
-            rl.question("Add some buy amount!!!", function (buyAmount) {
+            rl.question("Please Enter your purchase amount!!!  ", function (buyAmount) {
 
-                rl.question("Add some buy amount!!!", function (percentageDiscount) {
-                    // depositeValue = Deposit;
-                    // bonusValue = Bonus;
-                    // winValue = win;
-                    // buyAmountValue = buyAmount;
-                    // percentageDiscountValue = percentageDiscount;
+                rl.question("Please Enter Percantage Discount!!!  ", function (percentageDiscount) {
 
                     Deposit(Deposits);
                     Bonus(BonusValue);
                     win(winValue);
                     var buyServices = buyService(buyAmount, percentageDiscount)
-                    console.log("this buyservices :: ",buyServices)
-                    console.log("this buyservices :: ",total)
-                    console.log("this buyservices :: ",winningAmount)
-                    console.log("this buyservices :: ",depositedAmount)
-                    console.log("this buyservices :: ",bonusAmount)
-
-
-
 
                     if (buyServices == 0) {
-                        console.log("You Dn't have enough money")
+                        console.log("You Don't have enough money")
                         rl.close();
                     } else{
-                        console.log("You bought the service. You now have " << total << " in your wallet.");
+                        console.log(`You bought the service. You now have ${total} in your wallet`);
+
+                        console.log(`You now have ${depositedAmount} in your Deposite wallet`);
+
+                        console.log(`You now have ${bonusAmount} in your Bonus wallet`);
+
+                        console.log(`You now have ${winningAmount} in your Win wallet`);
+
                         rl.close();
                         return 0;
                     }
